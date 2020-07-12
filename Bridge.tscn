@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Panel.gd" type="Script" id=1]
+
+[node name="Bridge" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Log" type="TextEdit" parent="Panel"]
+margin_left = 30.0
+margin_top = 399.0
+margin_right = 999.0
+margin_bottom = 578.0
+selecting_enabled = false
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 379.0
+margin_right = 64.0
+margin_bottom = 393.0
+text = "Log"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 26.0
+margin_top = 22.0
+margin_right = 66.0
+margin_bottom = 36.0
+text = "Godot Evil Javascript Bridge"
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 694.0
+margin_top = 129.0
+margin_right = 785.0
+margin_bottom = 143.0
+text = "Color Action"
+
+[node name="txtEval" type="TextEdit" parent="Panel"]
+margin_left = 42.0
+margin_top = 46.0
+margin_right = 378.0
+margin_bottom = 86.0
+
+[node name="btnEval" type="Button" parent="Panel"]
+margin_left = 392.0
+margin_top = 51.0
+margin_right = 441.0
+margin_bottom = 83.0
+text = "Eval"
+
+[node name="txtOut" type="TextEdit" parent="Panel"]
+margin_left = 44.0
+margin_top = 141.0
+margin_right = 380.0
+margin_bottom = 181.0
+
+[node name="btnEval2" type="Button" parent="Panel"]
+margin_left = 394.0
+margin_top = 146.0
+margin_right = 554.0
+margin_bottom = 178.0
+text = "Add Text to Output"
+
+[node name="txtOutEval" type="TextEdit" parent="Panel"]
+margin_left = 44.0
+margin_top = 184.0
+margin_right = 380.0
+margin_bottom = 224.0
+
+[node name="btnEval3" type="Button" parent="Panel"]
+margin_left = 394.0
+margin_top = 189.0
+margin_right = 543.0
+margin_bottom = 221.0
+text = "Add Evil Text to Output"
+
+[node name="btnOutputTime" type="Button" parent="Panel"]
+margin_left = 43.0
+margin_top = 99.0
+margin_right = 183.0
+margin_bottom = 131.0
+text = "Add Time to Ouput"
+
+[node name="colorRect" type="ColorRect" parent="Panel"]
+margin_left = 717.0
+margin_top = 156.0
+margin_right = 757.0
+margin_bottom = 196.0
+[connection signal="pressed" from="Panel/btnEval" to="Panel" method="_on_btnEval_pressed"]
+[connection signal="pressed" from="Panel/btnEval2" to="Panel" method="_on_btnEval2_pressed"]
+[connection signal="pressed" from="Panel/btnEval3" to="Panel" method="_on_btnEval3_pressed"]
+[connection signal="pressed" from="Panel/btnOutputTime" to="Panel" method="_on_btnOutputTime_pressed"]
