@@ -14,12 +14,11 @@ Technical Spike for Godot to talk to Javascript
 The Bridge is defined in the export/egb.js. The idea is to have one input and output array that is monitored and pushed by Godot and Javascript.
 
 Godot checks the EGB.input array for new elements and shifts the first one every 1/20 seconds
-
-Godot pushed into the EGB.output array
-
 Two "actions" are defined to change the color of the white box. The Spike is triggered by the following 2x strings:
 - c|red
 - c|green
+
+Godot pushes it's data 1) as text or 2) raw into the EGB.output array
 
 ## Infos
 - Wait "some time" till the whole project is loaded ... you can see this in the JS Console
